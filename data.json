@@ -79,11 +79,7 @@
     { "word": "Вишня", "level": 2, "img": "https://pickimage.ru/wp-content/uploads/images/detskie/redpictures/krasnicvet7.jpg", "width": 682, "height": 618, "read": false },
     { "word": "Краб", "level": 1, "img": "https://pickimage.ru/wp-content/uploads/2022/02/krasnicvet1.jpg", "width": 700, "height": 454, "read": false },
     { "word": "Роза", "level": 2, "img": "https://pickimage.ru/wp-content/uploads/images/detskie/redpictures/krasnicvet13.jpg", "width": 682, "height": 546, "read": false },
-    { "word": "Блины", "level": 2, "img": " https://galerey-room.ru/images/235325_1421873605.png", "width": 800, "height": 476, "read": false },
-    { "word": "Гриб", "level": 1, "img": " https://galerey-room.ru/images/080040_1385528440.png", "width": 550, "height": 561, "read": false },
-    { "word": "Бант", "level": 1, "img": " https://galerey-room.ru/images/101520_1410761720.png", "width": 566, "height": 600, "read": false },
-    { "word": "Дерево", "level": 3, "img": "https://galerey-room.ru/images/071154_1385525514.png", "width": 600, "height": 543, "read": false },
-    { "word": "Тюльпан", "level": 3, "img": " https://galerey-room.ru/images/063825_1395286705.png", "width": 562, "height": 374, "read": false }
-
+    { "word": "Дерево", "level": 3, "img": "https://galerey-room.ru/images/071154_1385525514.png", "width": 600, "height": 543, "read": false }
+   
 ]
 
