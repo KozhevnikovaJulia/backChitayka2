@@ -30,9 +30,8 @@
     { "word": "Курица", "level": 3, "img": "https://www.ejin.ru/wp-content/uploads/2017/11/kurica-kartinki-1-2.jpg", "width": 400, "height": 400, "read": false },
     { "word": "Корова", "level": 3, "img": "https://www.ejin.ru/wp-content/uploads/2017/11/maxresdefault-11-800x788.jpg", "width": 800, "height": 798, "read": false },
     { "word": "Самолет", "level": 3, "img": "https://flomaster.club/uploads/posts/2021-11/thumbs/1637677936_4-flomaster-club-p-samolet-risunok-dlya-detei-detskie-4.png", "width": 750, "height": 750, "read": false },
-    { "word": "Улитка", "level": 3, "img": "https://kartinki.detki.today/wp-content/uploads/2017/07/ulitka-risunok2-400x368.jpg", "width": 400, "height": 368, "read": false },
+    { "word": "Улитка", "level": 3, "img": "https://w7.pngwing.com/pngs/660/10/png-transparent-snail-drawing-slug-snail-animals-happy-birthday-vector-images-cartoon-thumbnail.png", "width": 2661, "height": 2075, "read": false },
     { "word": "Бабочка", "level": 3, "img": "https://flomaster.club/uploads/posts/2022-01/thumbs/1641355719_2-flomaster-club-p-babochki-risunki-tsvetnie-dlya-detei-krasi-2.png", "width": 730, "height": 609, "read": false },
-    { "word": "Зонт", "level": 1, "img": "https://pickimage.ru/wp-content/uploads/2021/04/zontik1.jpg", "width": 700, "height": 583, "read": false },
     { "word": "Морковка", "level": 3, "img": "https://pickimage.ru/wp-content/uploads/2021/04/morkov1.jpg", "width": 700, "height": 602, "read": false },
     { "word": "Капуста", "level": 3, "img": "https://pickimage.ru/wp-content/uploads/images/detskie/cabbage/kapusta4.jpg", "width": 682, "height": 457, "read": false },
     { "word": "Огурец", "level": 3, "img": "https://pickimage.ru/wp-content/uploads/2021/04/ogurec1.jpg", "width": 700, "height": 581, "read": false },
@@ -80,11 +79,10 @@
     { "word": "Вишня", "level": 2, "img": "https://pickimage.ru/wp-content/uploads/images/detskie/redpictures/krasnicvet7.jpg", "width": 682, "height": 618, "read": false },
     { "word": "Краб", "level": 1, "img": "https://pickimage.ru/wp-content/uploads/2022/02/krasnicvet1.jpg", "width": 700, "height": 454, "read": false },
     { "word": "Роза", "level": 2, "img": "https://pickimage.ru/wp-content/uploads/images/detskie/redpictures/krasnicvet13.jpg", "width": 682, "height": 546, "read": false },
-    { "word": "Губы", "level": 2, "img": " https://pickimage.ru/wp-content/uploads/images/detskie/lips/gubi15.jpg", "width": 682, "height": 376, "read": false },
-    { "word": "Глаз", "level": 1, "img": " https://pickimage.ru/wp-content/uploads/images/detskie/eyes/glaza12.jpg", "width": 682, "height": 492, "read": false }
-
+    { "word": "Губы", "level": 2, "img": " https://w7.pngwing.com/pngs/181/760/png-transparent-lip-mouth-lips-people-cartoon-lip-thumbnail.png", "width": 512, "height": 512, "read": false },
+    { "word": "Глаз", "level": 1, "img": " https://w7.pngwing.com/pngs/564/436/png-transparent-human-eye-art-human-eye-euclidean-hand-painted-eyes-watercolor-painting-brown-people-thumbnail.png", "width": 1250, "height": 1250, "read": false },
+    { "word": "Зуб", "level": 1, "img": " https://w7.pngwing.com/pngs/770/98/png-transparent-wisdom-tooth-dentistry-mouth-protect-teeth-white-tooth-illustration-people-heart-environmental-protection-thumbnail.png", "width": 2903, "height": 2928, "read": false }
+    
    
 ]
-
-
 
