@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Word {
+  id        Int      @id @default(autoincrement())
+  word      String
+  level     Int
+  img       String?  
+  read      Boolean
+  createdAt DateTime @default(now()) @map("created_at")
+  
+  @@map("words") // указываем, что таблица называется words
+}
