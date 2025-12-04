@@ -32,6 +32,67 @@ const addWord = async wordData => {
     throw error;
   }
 };
+const addMultipleWords = async wordsArray => {
+  try {
+    if (!Array.isArray(wordsArray) || wordsArray.length === 0) {
+      throw new Error('Нужно передать массив слов');
+    }
+
+    // Преобразуем данные
+    const wordsToCreate = wordsArray.map(word => ({
+      word: word.word,
+      level: parseInt(word.level) || 1,
+      img: word.img || null,
+      read: word.read || false,
+    }));
+
+    // Используем транзакцию для надежности
+    const result = await prisma.$transaction(wordsToCreate.map(wordData => prisma.word.create({ data: wordData })));
+
+    console.log(`✅ Добавлено ${result.length} слов`);
+    return result;
+  } catch (error) {
+    console.error('❌ Ошибка при добавлении нескольких слов:', error.message);
+    throw error;
+  }
+};
+
+/**
+ * Добавляет слово с проверкой на дубликаты
+ * @param {Object} wordData - Данные слова
+ * @returns {Promise<Object>} - Результат операции
+ */
+const addWordWithCheck = async wordData => {
+  try {
+    // Проверяем, существует ли уже такое слово
+    const existingWord = await prisma.word.findFirst({
+      where: {
+        word: wordData.word,
+      },
+    });
+
+    if (existingWord) {
+      console.log(`⚠️ Слово "${wordData.word}" уже существует с ID: ${existingWord.id}`);
+      return {
+        success: false,
+        message: 'Слово уже существует',
+        data: existingWord,
+      };
+    }
+
+    // Добавляем новое слово
+    const newWord = await addWord(wordData);
+
+    return {
+      success: true,
+      message: 'Слово успешно добавлено',
+      data: newWord,
+    };
+  } catch (error) {
+    console.error('❌ Ошибка при проверке и добавлении слова:', error.message);
+    throw error;
+  }
+};
 
 const getAllWords = async () => {
   try {
@@ -111,6 +172,8 @@ const deleteWord = async id => {
 
 module.exports = {
   addWord,
+  addMultipleWords,
+  addWordWithCheck,
   getAllWords,
   getWordById,
   updateWord,

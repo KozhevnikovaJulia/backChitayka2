@@ -65,7 +65,57 @@ router.post('/', async (req, res) => {
     });
   }
 });
+// POST: Добавить несколько слов
+router.post('/bulk', async (req, res) => {
+  try {
+    const words = req.body.words;
 
+    if (!Array.isArray(words) || words.length === 0) {
+      return res.status(400).json({
+        success: false,
+        error: 'Нужно передать массив слов в поле "words"',
+      });
+    }
+
+    const newWords = await addMultipleWords(words);
+
+    res.status(201).json({
+      success: true,
+      message: `Добавлено ${newWords.length} слов`,
+      data: newWords,
+    });
+  } catch (error) {
+    console.error('Error in POST /words/bulk:', error);
+    res.status(400).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+// POST: Добавить слово с проверкой на дубликаты
+router.post('/safe', async (req, res) => {
+  try {
+    const { word, level, img, read } = req.body;
+
+    if (!word || !level) {
+      return res.status(400).json({
+        success: false,
+        error: 'Поля "word" и "level" обязательны',
+      });
+    }
+
+    const result = await addWordWithCheck({ word, level, img, read });
+
+    res.status(result.success ? 201 : 200).json(result);
+  } catch (error) {
+    console.error('Error in POST /words/safe:', error);
+    res.status(400).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
 // PUT: Обновить слово
 router.put('/:id', async (req, res) => {
   try {
